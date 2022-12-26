@@ -130,7 +130,7 @@ export const SchoolList = () => {
                 </Dialog.Trigger>
                 <Dialog.Portal>
                   <Dialog.Overlay className="fixed top-0 left-0 w-screen h-screen bg-gray-400 opacity-50" />
-                  <Dialog.Content className="bg-white rounded shadow-lg p-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90vw] sm:min-w-[600px]">
+                  <Dialog.Content className="bg-white rounded-md shadow-lg p-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90vw] sm:min-w-[600px]">
                     <Dialog.Close asChild>
                       <button
                         className="absolute top-4 right-4 p-2 rounded hover:bg-slate-200 transition "
@@ -139,6 +139,10 @@ export const SchoolList = () => {
                         <Cross2Icon />
                       </button>
                     </Dialog.Close>
+
+                    <Dialog.Title className="font-bold mt-1 mb-3 sm:pl-4">
+                      School Detail
+                    </Dialog.Title>
 
                     <table className="w-[80vw] sm:w-full">
                       <tbody>

@@ -30,13 +30,13 @@ export default function Pagination() {
         marginPagesDisplayed={1}
         pageCount={pageCount}
         renderOnZeroPageCount={() => null}
-        className="flex items-stretch justify-center gap-2 text-black h-full"
-        activeLinkClassName="font-bold bg-[#dfdfdf] rounded w-full h-full border border-gray-700 border-solid"
-        pageLinkClassName="w-12 flex items-center justify-center rounded bg-gray-100 rounded h-full hover:bg-gray-200 transition"
-        previousLinkClassName="flex items-center justify-center bg-gray-100 rounded px-4 h-full hover:bg-gray-200 transition"
-        nextLinkClassName="flex items-center justify-center bg-gray-100 rounded px-4 h-full hover:bg-gray-200 transition"
-        disabledLinkClassName="p-0 m-0 mx-0 text-gray-300 bg-gray-50 cursor-default hover:bg-gray-50"
-        breakClassName="w-12 flex items-center justify-center"
+        className="flex items-stretch justify-center gap-2 text-black sm:h-full"
+        activeLinkClassName="font-bold bg-[#dfdfdf] rounded sm:w-full sm:h-full border border-gray-700 border-solid"
+        pageLinkClassName="w-8 h-8 sm:w-12 sm:h-full flex items-center justify-center rounded bg-gray-100 rounded hover:bg-gray-200 transition"
+        previousLinkClassName="w-8 h-8 sm:w-12 sm:h-full flex items-center justify-center bg-gray-100 rounded hover:bg-gray-200 transition"
+        nextLinkClassName="w-8 h-8 sm:w-12 sm:h-full flex items-center justify-center bg-gray-100 rounded  hover:bg-gray-200 transition"
+        disabledLinkClassName="w-8 h-8 sm:w-12 sm:h-full text-gray-300 bg-gray-50 cursor-default hover:bg-gray-50"
+        breakClassName="w-8 h-8 sm:w-12 flex items-center justify-center"
       />
     </div>
   );
