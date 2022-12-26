@@ -75,8 +75,8 @@ export const SchoolList = () => {
 
   return (
     <div className="h-[calc(100vh-226px)] overflow-scroll shadow">
-      <table className="w-full text-sm text-left">
-        <thead className="bg-white border-b uppercase">
+      <table className="table-auto w-full text-sm text-left relative">
+        <thead className="bg-white border-b uppercase sticky top-0">
           <tr>
             <th scope="col" className="font-bold py-3 px-6">
               Name
@@ -124,7 +124,7 @@ export const SchoolList = () => {
 
               <Dialog.Root>
                 <Dialog.Trigger className="cursor-pointer" asChild>
-                  <td className="w-full text-sm text-gray-900 font-light sm:px-6 py-2 sm:py-4 whitespace-nowrap text-ellipsis overflow-hidden text-center hover:bg-gray-200 transition">
+                  <td className="w-[-webkit-fill-available] max-w-sm text-sm text-gray-900 font-light sm:px-6 py-2 sm:py-4 whitespace-nowrap text-ellipsis overflow-hidden text-center hover:bg-gray-200 transition">
                     More
                   </td>
                 </Dialog.Trigger>
