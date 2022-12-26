@@ -1,16 +1,19 @@
 'use client';
 
-import * as Dialog from '@radix-ui/react-dialog';
-import { Cross2Icon } from '@radix-ui/react-icons';
-import { atom, useAtom } from 'jotai';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import { atom, useAtom } from 'jotai';
+import { Cross2Icon } from '@radix-ui/react-icons';
 import { changePageUrl } from '../helpers/constants';
 import { Size, useWindowSize } from '../hooks/useWindowSize';
-import Loading from './loading';
 import { School, SchoolAPIResponse } from './page';
 import { pageAtom } from './Pagination';
 import { searchAtom } from './SearchInput';
+import Image from 'next/image';
+import Link from 'next/link';
+import Loading from './loading';
+
+import noResults from '../public/no-results.png';
 
 export const schoolListAtom = atom<SchoolAPIResponse>({} as SchoolAPIResponse);
 
@@ -70,6 +73,23 @@ export const SchoolList = () => {
     return (
       <div className="h-[calc(100vh-226px)] overflow-scroll shadow flex items-center justify-center">
         <Loading />
+      </div>
+    );
+
+  if (currentList?.length === 0)
+    return (
+      <div className="h-[calc(100vh-226px)] overflow-scroll shadow flex flex-col items-center justify-center">
+        <div className="w-56 h-56 relative">
+          <Image
+            src={noResults}
+            alt="Sad folder without results"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <h2 className="font-bold text-2xl sm:text-3xl mt-12">
+          Oooops, no results found...
+        </h2>
       </div>
     );
 
