@@ -124,7 +124,7 @@ export const SchoolList = () => {
 
               <Dialog.Root>
                 <Dialog.Trigger className="cursor-pointer" asChild>
-                  <td className="text-sm text-gray-900 font-light sm:px-6 py-2 sm:py-4 whitespace-nowrap text-ellipsis overflow-hidden text-center hover:bg-gray-200 transition">
+                  <td className="w-full text-sm text-gray-900 font-light sm:px-6 py-2 sm:py-4 whitespace-nowrap text-ellipsis overflow-hidden text-center hover:bg-gray-200 transition">
                     More
                   </td>
                 </Dialog.Trigger>
